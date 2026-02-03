@@ -21,6 +21,17 @@ to have 3 choices, we have to be able to round down 3 floating numbers to intege
   /: 0.5/3 = 0.167 gives 2 choices - 0 and 1
 CONCLUSION: Range * n you will get n possible whole numbers (0 to n-1) when rounded down with Math.floor()
 
+ALTERNATIVELY:
 function getComputerChoice() {
+    let computerChoice = Math.floor(Math.random() * 3);
 
+    switch (computerChoice) {
+        case 0:
+            return "rock";
+        case 1:
+            return "paper";
+        default:
+            return "scissors";
+    }
+    */
 }
