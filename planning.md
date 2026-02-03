@@ -1,3 +1,4 @@
+STEP 2
 will RANDOMLY return one of three strings:
 "rock", "paper", "scissors"
 Math.random method returns a random number where num >= 0 && num < 1
@@ -35,3 +36,9 @@ function getComputerChoice() {
     }
     */
 }
+
+STEP 3
+Use prompt method to get user's input
+Do handle prompting for invalid input and edge cases
+including 0, empty string, NaN, undefined, numbers
+console.log(getHumanChoice() to return human choice
