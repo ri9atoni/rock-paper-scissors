@@ -23,5 +23,9 @@ console.log(getComputerChoice());
 console.log(getComputerChoice());
 console.log(getComputerChoice());
 
+function getHumanChoice() {
+    let humanChoice = prompt("What's your choice?",'').toLowerCase();
+    return humanChoice;
+}
 
-
+console.log(getHumanChoice());
