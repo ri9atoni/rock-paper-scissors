@@ -7,7 +7,7 @@ function getComputerChoice() {
     //If the integer is 0, 1, and 2, return "rock", "paper", "scissors" respectively
     let computerChoice = Math.floor(Math.random() * 3);
 
-    
+
     if (computerChoice === 0) {
         return "rock";
     } else if (computerChoice === 1) {
@@ -15,17 +15,13 @@ function getComputerChoice() {
     } else {
         return "scissors";
     }
-   
-    //OR
-
-    /*
-    switch (computerChoice) {
-        case 0:
-            return "rock";
-        case 1:
-            return "paper";
-        default:
-            return "scissors";
-    }
-    */
 }
+
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+
+
+
