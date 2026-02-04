@@ -70,3 +70,20 @@ First idea:
 Create three if functions for computerChoice === "rock", "paper","scissors"
 Within the if functions for computerChoice, create another if function for humanChoice === "rock", else if "paper", else "scissors", and increment either humanScore or computerScore by 1, and return the string to announce if the player lose or win such as "You lose! Paper beats Rock"`
 This creates MANY nested if's -- 9 in fact -- too many! too complicated!!
+
+STEP 6
+Create new function playGame that calls playRound for 5 rounds
+Move playRound and scores inside the playGame function
+function playGame() {
+    declare humanScore and computerScore with value of 0
+    place playRound() function here
+        for loop
+        code for playRound()
+    compare humanScore with computerScore using if
+        humanScore === computerScore: return "it's a tie!"
+        else if humanScore > computerScore: return "you win!"
+        else: return "you lose!"
+    
+}
+
+console.log(playGame())
