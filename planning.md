@@ -52,7 +52,7 @@ Define two parameters in the function: humanChoice and computerChoice
 Create an if statement to check whether humanChoice is the same as computerChoice
     if it is, return "It's a tie!"
     no increment of score happens
-Create a function that checks the specific winning combinations for human
+    ELSE IF
     Rock > Scissors
     Scissors > Paper
     Paper > Rock
@@ -62,7 +62,8 @@ Create a function that checks the specific winning combinations for human
     if humanChoice === "paper" && computerChoice === "rock", human wins; return string and increment humanScore;
     COMBINE THESE? use ||
     if ((humanChoice === "rock" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "rock"))
-    else computer wins, return string "You lose! ${computerChoice} beats ${humanChoice}"; increment computerScore;
+    ELSE
+    computer wins, return string "You lose! ${computerChoice} beats ${humanChoice}"; increment computerScore;
     
 
 First idea:
