@@ -71,7 +71,7 @@ console.log(humanSelection);
 console.log(computerSelection);
 */
 
-console.log(playRound(humanSelection, computerSelection));
+//console.log(playRound(humanSelection, computerSelection));
 
 /*
 check if function works using hardcoded choices
@@ -99,9 +99,20 @@ function playGame() {
             return `You lose! ${computerChoice} beats ${humanChoice}`;
         }
     }
+
     for (let i = 0; i < 5; i++) {
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         console.log(playRound(humanChoice,computerChoice))
     }
+
+    if (humanScore === computerScore) {
+        return "It's a tie!";
+    } else if (humanScore > computerScore) {
+        return "You win!";
+    } else {
+        return "You lose!";
+    }
 }
+
+console.log(playGame());
