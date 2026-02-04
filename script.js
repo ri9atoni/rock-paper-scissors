@@ -47,7 +47,7 @@ console.log(typeof computerScore);
 //create playRound function
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        return "It's a tie!"
+        return "It's a tie!";
     } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
     (humanChoice === "scissors" && computerChoice === "paper") || 
     (humanChoice === "paper" && computerChoice === "rock")) {
@@ -64,6 +64,14 @@ const computerSelection = getComputerChoice();
 console.log(humanSelection);
 console.log(computerSelection);
 
-playRound(humanSelection, computerSelection);
+console.log(playRound(humanSelection, computerSelection));
+
+/*
+check if function works using hardcoded choices
+playRound("Rock","Scissors");
+playRound("Rock","Paper");
+playRound("Rock","Rock");
 console.log(humanScore);
 console.log(computerScore);
+*/
+
