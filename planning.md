@@ -42,3 +42,7 @@ Use prompt method to get user's input
 Do handle prompting for invalid input and edge cases
 including 0, empty string, NaN, undefined, numbers
 console.log(getHumanChoice() to return human choice
+
+STEP 4
+create humanScore and computerScore in the GLOBAL scope to keep track of players score
+initialize both variables with 0
