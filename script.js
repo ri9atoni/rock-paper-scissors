@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Hello World");
 
 
@@ -29,3 +31,13 @@ function getHumanChoice() {
 }
 
 console.log(getHumanChoice());
+
+//Initialize counter variables - humanScore and computerScore - and set both to 0
+let humanScore = 0;
+let computerScore = 0;
+
+console.log(humanScore);
+console.log(computerScore);
+
+console.log(typeof humanScore);
+console.log(typeof computerScore);
