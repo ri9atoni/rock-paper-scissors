@@ -9,28 +9,30 @@ function getComputerChoice() {
     //If the integer is 0, 1, and 2, return "rock", "paper", "scissors" respectively
     let computerChoice = Math.floor(Math.random() * 3);
 
-
     if (computerChoice === 0) {
-        return "rock";
+        return "Rock";
     } else if (computerChoice === 1) {
-        return "paper";
+        return "Paper";
     } else {
-        return "scissors";
+        return "Scissors";
     }
 }
 
+/*
 console.log(getComputerChoice());
 console.log(getComputerChoice());
 console.log(getComputerChoice());
 console.log(getComputerChoice());
 console.log(getComputerChoice());
+*/
 
 function getHumanChoice() {
     let humanChoice = prompt("What's your choice?",'').toLowerCase();
+    humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
     return humanChoice;
 }
 
-console.log(getHumanChoice());
+//console.log(getHumanChoice());
 
 //Initialize counter variables - humanScore and computerScore - and set both to 0
 let humanScore = 0;
@@ -41,3 +43,27 @@ console.log(computerScore);
 
 console.log(typeof humanScore);
 console.log(typeof computerScore);
+
+//create playRound function
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!"
+    } else if ((humanChoice === "rock" && computerChoice === "scissors") || 
+    (humanChoice === "scissors" && computerChoice === "paper") || 
+    (humanChoice === "paper" && computerChoice === "rock")) {
+        humanScore += 1;
+        return `You win! ${humanChoice} beats ${computerChoice}!`;
+    } else {
+        computerScore += 1;
+        return `You lose! ${computerChoice} beats ${humanChoice}`;
+    }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+console.log(humanSelection);
+console.log(computerSelection);
+
+playRound(humanSelection, computerSelection);
+console.log(humanScore);
+console.log(computerScore);
