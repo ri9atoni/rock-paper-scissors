@@ -39,10 +39,33 @@ function getComputerChoice() {
 
 STEP 3
 Use prompt method to get user's input
-Do handle prompting for invalid input and edge cases
-including 0, empty string, NaN, undefined, numbers
-console.log(getHumanChoice() to return human choice
+make parameter humanChoice case-insensitive to clean and return data
+console.log(getHumanChoice()) to return human choice
 
 STEP 4
 create humanScore and computerScore in the GLOBAL scope to keep track of players score
 initialize both variables with 0
+
+STEP 5
+Create new function playRound
+Define two parameters in the function: humanChoice and computerChoice
+Create an if statement to check whether humanChoice is the same as computerChoice
+    if it is, return "It's a tie!"
+    no increment of score happens
+Create a function that checks the specific winning combinations for human
+    Rock > Scissors
+    Scissors > Paper
+    Paper > Rock
+    To translate into code:
+    if humanChoice === "rock" && computerChoice === "scissors", human wins; return string and increment humanScore;
+    if humanChoice === "scissors" && computerChoice === "Paper", human wins; return string and increment humanScore;
+    if humanChoice === "paper" && computerChoice === "rock", human wins; return string and increment humanScore;
+    COMBINE THESE? use ||
+    if ((humanChoice === "rock" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "rock"))
+    else computer wins, return string "You lose! ${computerChoice} beats ${humanChoice}"; increment computerScore;
+    
+
+First idea:
+Create three if functions for computerChoice === "rock", "paper","scissors"
+Within the if functions for computerChoice, create another if function for humanChoice === "rock", else if "paper", else "scissors", and increment either humanScore or computerScore by 1, and return the string to announce if the player lose or win such as "You lose! Paper beats Rock"`
+This creates MANY nested if's -- 9 in fact -- too many! too complicated!!
