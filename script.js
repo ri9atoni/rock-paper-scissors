@@ -42,6 +42,7 @@ function playGame() {
         }
     }
 
+    /*
     for (let i = 0; i < 5; i++) {
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
@@ -49,6 +50,7 @@ function playGame() {
         console.log("Your score: "+ humanScore);
         console.log("Computer score: "+ computerScore);
     }
+    */
 
     if (humanScore === computerScore) {
         return "It's a tie!";
