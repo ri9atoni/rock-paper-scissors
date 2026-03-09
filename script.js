@@ -53,14 +53,26 @@ const scissorsButton = document.getElementById("scissors-btn");
 rockButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
     console.log(playRound("Rock", computerChoice));
+    let winner = checkWinner();
+    if (winner !== null) {
+        console.log(winner);
+    }
 });
 
 paperButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
     console.log(playRound("Paper", computerChoice));
+    let winner = checkWinner();
+    if (winner !== null) {
+    console.log(winner);
+    }
 });
 
 scissorsButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
     console.log(playRound("Scissors", computerChoice));
+    let winner = checkWinner();
+    if (winner !== null) {
+    console.log(winner);
+    }
 });
