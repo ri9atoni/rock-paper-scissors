@@ -11,6 +11,8 @@ const scoreDiv = document.getElementById("score");
 const resultDiv = document.getElementById("result");
 const winnerDiv = document.getElementById("winner-display");
 
+const resetButton = document.getElementById("reset-btn");
+
 function getComputerChoice() {
     //Generate a random number that's greater than or equal to 0 and less than 1
     //Multiply that number by 3, round it down to integer, and store it in a variable
@@ -57,41 +59,59 @@ function checkWinner() {
 rockButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
     let roundResult = playRound("Rock", computerChoice);
-    resultDiv.textContent = roundResult;
     scoreDiv.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`;
+    resultDiv.textContent = roundResult;
     let winner = checkWinner();
     if (winner !== null) {
         winnerDiv.textContent = winner;
         rockButton.disabled = true;
         paperButton.disabled = true;
         scissorsButton.disabled = true;
+        resetButton.hidden = false;
     }
 });
 
 paperButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
     let roundResult = playRound("Paper", computerChoice);
-    resultDiv.textContent = roundResult;
     scoreDiv.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`;
+    resultDiv.textContent = roundResult;
     let winner = checkWinner();
     if (winner !== null) {
         winnerDiv.textContent = winner;
         rockButton.disabled = true;
         paperButton.disabled = true;
         scissorsButton.disabled = true;
+        resetButton.hidden = false;
     }
 });
 
 scissorsButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
     let roundResult = playRound("Scissors", computerChoice);
-    resultDiv.textContent = roundResult;
     scoreDiv.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`;
+    resultDiv.textContent = roundResult;
     let winner = checkWinner();
     if (winner !== null) {
         winnerDiv.textContent = winner;
         rockButton.disabled = true;
         paperButton.disabled = true;
         scissorsButton.disabled = true;
+        resetButton.hidden = false;
     }
 });
+
+resetButton.addEventListener("click", function() {
+    humanScore = 0;
+    computerScore = 0;
+
+    scoreDiv.textContent = "Scores";
+    resultDiv.textContent = "Round Result";
+    winnerDiv.textContent = "Winner";
+    
+    rockButton.disabled = false;
+    paperButton.disabled = false;
+    scissorsButton.disabled = false;
+
+    resetButton.hidden = true;
+})
