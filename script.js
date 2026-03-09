@@ -51,6 +51,16 @@ const paperButton = document.getElementById("paper-btn");
 const scissorsButton = document.getElementById("scissors-btn");
 
 rockButton.addEventListener("click", function() {
-    let computerChoice = getComputerChoice()
+    let computerChoice = getComputerChoice();
     console.log(playRound("Rock", computerChoice));
+});
+
+paperButton.addEventListener("click", function() {
+    let computerChoice = getComputerChoice();
+    console.log(playRound("Paper", computerChoice));
+});
+
+scissorsButton.addEventListener("click", function() {
+    let computerChoice = getComputerChoice();
+    console.log(playRound("Scissors", computerChoice));
 });
