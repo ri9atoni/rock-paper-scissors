@@ -3,6 +3,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const rockButton = document.getElementById("rock-btn");
+const paperButton = document.getElementById("paper-btn");
+const scissorsButton = document.getElementById("scissors-btn");
+
+const scoreDiv = document.getElementById("score");
+const resultDiv = document.getElementById("result");
+const winnerDiv = document.getElementById("winner-display");
 
 function getComputerChoice() {
     //Generate a random number that's greater than or equal to 0 and less than 1
@@ -45,10 +52,6 @@ function checkWinner() {
         return null;
     }
 }
-
-const rockButton = document.getElementById("rock-btn");
-const paperButton = document.getElementById("paper-btn");
-const scissorsButton = document.getElementById("scissors-btn");
 
 rockButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
