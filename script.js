@@ -1,6 +1,7 @@
 "use strict";
 
-console.log("Hello World");
+let humanScore = 0;
+let computerScore = 0;
 
 
 function getComputerChoice() {
@@ -18,11 +19,7 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("What's your choice?",'').toLowerCase();
-    humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
-    return humanChoice;
-}
+//replace getHumanChoice() with buttons
 
 //create playGame function; move playRound and score variables in it;
 function playGame() {
@@ -61,4 +58,4 @@ function playGame() {
     }
 }
 
-console.log(playGame());
+//console.log(playGame());
