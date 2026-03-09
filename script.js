@@ -53,12 +53,8 @@ function checkWinner() {
     }
 }
 
-let gameOver = false;
 
 rockButton.addEventListener("click", function() {
-    if (gameOver) {
-        return;
-    }
     let computerChoice = getComputerChoice();
     let roundResult = playRound("Rock", computerChoice);
     resultDiv.textContent = roundResult;
@@ -66,7 +62,6 @@ rockButton.addEventListener("click", function() {
     let winner = checkWinner();
     if (winner !== null) {
         winnerDiv.textContent = winner;
-        gameOver = true;
         rockButton.disabled = true;
         paperButton.disabled = true;
         scissorsButton.disabled = true;
@@ -74,9 +69,6 @@ rockButton.addEventListener("click", function() {
 });
 
 paperButton.addEventListener("click", function() {
-    if (gameOver) {
-        return;
-    }
     let computerChoice = getComputerChoice();
     let roundResult = playRound("Paper", computerChoice);
     resultDiv.textContent = roundResult;
@@ -84,7 +76,6 @@ paperButton.addEventListener("click", function() {
     let winner = checkWinner();
     if (winner !== null) {
         winnerDiv.textContent = winner;
-        gameOver = true;
         rockButton.disabled = true;
         paperButton.disabled = true;
         scissorsButton.disabled = true;
@@ -92,9 +83,6 @@ paperButton.addEventListener("click", function() {
 });
 
 scissorsButton.addEventListener("click", function() {
-    if (gameOver) {
-        return;
-    }
     let computerChoice = getComputerChoice();
     let roundResult = playRound("Scissors", computerChoice);
     resultDiv.textContent = roundResult;
@@ -102,7 +90,6 @@ scissorsButton.addEventListener("click", function() {
     let winner = checkWinner();
     if (winner !== null) {
         winnerDiv.textContent = winner;
-        gameOver = true;
         rockButton.disabled = true;
         paperButton.disabled = true;
         scissorsButton.disabled = true;
