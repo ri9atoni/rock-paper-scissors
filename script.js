@@ -55,27 +55,33 @@ function checkWinner() {
 
 rockButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
-    console.log(playRound("Rock", computerChoice));
+    let roundResult = playRound("Rock", computerChoice);
+    resultDiv.textContent = roundResult;
+    scoreDiv.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`;
     let winner = checkWinner();
     if (winner !== null) {
-        console.log(winner);
+        winnerDiv.textContent = winner;
     }
 });
 
 paperButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
-    console.log(playRound("Paper", computerChoice));
+    let roundResult = playRound("Paper", computerChoice);
+    resultDiv.textContent = roundResult;
+    scoreDiv.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`;
     let winner = checkWinner();
     if (winner !== null) {
-    console.log(winner);
+    winnerDiv.textContent = winner;
     }
 });
 
 scissorsButton.addEventListener("click", function() {
     let computerChoice = getComputerChoice();
-    console.log(playRound("Scissors", computerChoice));
+    let roundResult = playRound("Scissors", computerChoice);
+    resultDiv.textContent = roundResult;
+    scoreDiv.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`;
     let winner = checkWinner();
     if (winner !== null) {
-    console.log(winner);
+    winnerDiv.textContent = winner;
     }
 });
